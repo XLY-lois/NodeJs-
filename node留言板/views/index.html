@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>一个简单的留言板-首页</title>
+	<link rel="stylesheet" href="../public/bootstrap.css">
+</head>
+<body>
+	<div class="header container">
+		<div class="page-header">
+			<h1>水水留言板 <small>有什么想说的吗？</small></h1>
+			<a class="btn btn-success" href="/post">发表留言</a>
+		</div>
+	</div>
+	<div class="conmment container">
+		<ur class="list-group">
+			{{each comments}}
+			<li class="list-group-item">{{ $value.name }}说：{{ $value.msg }}<span class="pull-right">    {{ $value.time }}</span></li>
+			{{/each}}
+		</ur>
+	</div>
+</body>
+</html>
